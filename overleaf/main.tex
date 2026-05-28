@@ -909,8 +909,7 @@ $\geq 0.90$ sensitivity on OOF predictions; and
 (iii)~\textit{F1-optimal} maximises minority-class F1 on OOF predictions.
 Table~\ref{tab:threshold} reports results for the two most instructive classifiers.
 
-\begin{table}[ht!]
-  \centering
+\begin{table}[h
   \caption{Test-set performance under three decision thresholds for MLP+None and
     LightGBM+ROS. Thresholds marked $\dagger$ were derived from out-of-fold CV
     predictions; the 0.50 row is the unmodified baseline from Table~\ref{tab:test}.
@@ -1252,6 +1251,14 @@ richer longitudinal feature representations, and validation on independent cohor
 \textbf{Technical notes:}
  We used Python 3.10.0, and Tensorflow \cite{abadi2016tensorflow} 2.8.0 to develop the proposed model. The GPU hardware used to train and sample the models was Nvidia RTX 3090, 24GB of GDDR6 VRAM, using CUDA 11.2.
 
+
+\section*{Code Availability}
+The analysis code, pre-processed outputs, and figure generation scripts are
+publicly available at \url{https://github.com/NotAnnieMore/ThesisReplication}
+under the MIT Licence.
+Raw PRO-ACT data are not included due to the Data Use Agreement governing
+access to the PRO-ACT database; they can be requested at
+\url{https://ncri1.partners.org/ProACT}.
 
 \section*{Acknowledgment}
 This work is funded by national funds through the FCT - Foundation for Science and Technology, I.P., within the scope of the project CISUC - UID/CEC/00326/2020 and by European Social Fund, through the Regional Operational Program Centro 2020 and by the Portuguese Research Agency FCT, through D4 - Deep Drug Discovery and Deployment (CENTRO-01-0145-FEDER-029266). Maryam Abbasi thanks the National funding by FCT - Foundation for Science and Technology, P.I., through the institutional scientific employment program-contract (CEECINST/00077/2021).\\
