@@ -1249,7 +1249,7 @@ Future work should address threshold calibration and cost-sensitive learning,
 richer longitudinal feature representations, and validation on independent cohorts.
 
 \textbf{Technical notes:}
- We used Python 3.10.0, and Tensorflow \cite{abadi2016tensorflow} 2.8.0 to develop the proposed model. The GPU hardware used to train and sample the models was Nvidia RTX 3090, 24GB of GDDR6 VRAM, using CUDA 11.2.
+All experiments were implemented in Python~3.12 using scikit-learn~1.8~\cite{pedregosa2011scikit}, LightGBM~4.6~\cite{ke2017lightgbm}, Optuna~4.8~\cite{akiba2019optuna}, imbalanced-learn~\cite{lemaitre2017}, and SHAP~\cite{lundberg2017shap}. All computations were performed on a standard CPU environment; no GPU acceleration was required.
 
 
 \section*{Code Availability}
