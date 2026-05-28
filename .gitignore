@@ -55,6 +55,10 @@ desktop.ini
 # ── Excluded project files ────────────────────────────────────────────────────
 Rewrite.txt
 ALS_Paper_Review.txt
+context_paper_review_resolved.txt
+replication_global_context.txt
+revision_guide_ALS_paper.md
+summary_for_advisor.txt
 *.zip
 pdf/
 references/
