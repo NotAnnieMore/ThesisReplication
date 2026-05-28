@@ -52,5 +52,9 @@ desktop.ini
 *.fls
 *.fdb_latexmk
 
-# ── Large PDFs (pdf/ folder kept but ignore binary PDFs > reasonable size) ────
-pdf/*.pdf
+# ── Excluded project files ────────────────────────────────────────────────────
+Rewrite.txt
+ALS_Paper_Review.txt
+*.zip
+pdf/
+references/
