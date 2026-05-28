@@ -1,0 +1,8 @@
+classifier,imbalance_technique,thresh_default,thresh_youden,thresh_sens_opt,thresh_f1_opt,oof_n_samples,oof_n_positive
+KNN,RUS,0.5,0.4161,0.0,0.5606,3603,417
+NaiveBayes,None,0.5,0.0759,0.0,0.9507,3603,417
+DecisionTree,TomekLinks,0.5,0.1364,0.0,0.3017,3603,417
+RandomForest,None,0.5,0.112,0.0,0.2427,3603,417
+SVM,SMOTEENN,0.5,0.5052,0.0,0.9113,3603,417
+MLP,None,0.5,0.1524,0.0,0.2394,3603,417
+LightGBM,ROS,0.5,0.4043,0.0007,0.6557,3603,417

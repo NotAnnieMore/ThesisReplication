@@ -1,0 +1,66 @@
+General Recommendation
+The paper has good acceptance potential for the AI in Drug Discovery workshop at ICANN 2026, especially because it combines clinical ML, explainability, imbalance learning, Bayesian optimisation, and interpretable ensemble models. Nevertheless, the manuscript should be revised carefully to improve scientific rigor and avoid reviewer concerns.
+
+Detailed Revision Points
+Point 1: Potential Temporal Leakage (Most Serious Issue)
+Location	Methodology → Data Preprocessing section
+Problem	The paper states that ALSFRS-R decline slopes were computed using linear regression over available assessments. It is unclear whether those assessments include future information collected after diagnosis or near death. If future visits are used, the model may indirectly access outcome-related information, artificially inflating performance.
+Why It Matters	This is the most critical scientific issue in the paper. Clinical reviewers will immediately question whether the prediction setup uses future information unavailable at diagnosis.
+Suggested Improvement	Explicitly clarify the temporal window used for feature computation. State clearly whether only information available at diagnosis was used. If post-diagnosis data were used, explain and justify this carefully.
+
+Point 2: Very High AUC Values Need Stronger Justification
+Location	Results → Cross-validation and test-set results
+Problem	AUC values around 0.92 using only 23 engineered categorical/ordinal features are unusually strong for ALS prognosis prediction under severe imbalance.
+Why It Matters	Reviewers may suspect data leakage, optimistic splitting, or hidden overlap between training and test information.
+Suggested Improvement	Add a short discussion acknowledging that these results are strong and may partially reflect the structure of the PRO-ACT dataset. Reinforce the need for external validation.
+
+Point 3: Overinterpretation of MLP Behaviour
+Location	Results and Discussion → MLP analysis
+Problem	The manuscript explains the MLP behaviour using detailed internal reasoning about compressed probabilities and regularisation effects without directly demonstrating these mechanisms experimentally.
+Why It Matters	The explanations are plausible but speculative. The paper currently infers internal model behaviour without calibration plots or probability distribution analysis.
+Suggested Improvement	Use softer wording such as 'may indicate', 'suggests', or 'is consistent with'. Add calibration curves or threshold analysis to support the interpretation.
+
+Point 4: Missing Calibration Analysis
+Location	Results and Discussion sections
+Problem	The paper repeatedly discusses threshold mismatch and probability compression but does not include calibration curves, PR curves, threshold sweeps, or sensitivity-specificity analyses.
+Why It Matters	This weakens the central interpretation of the MLP failure under imbalance.
+Suggested Improvement	Add at least one calibration-related analysis (threshold sweep, calibration curve, PR curve, or ROC operating-point analysis).
+
+Point 5: Replication Claim Is Too Strong
+Location	Abstract, Introduction, and Conclusion
+Problem	The manuscript describes the work as a 'faithful replication', but the dataset, optimisation strategy, evaluation design, and classifiers differ substantially from the original study.
+Why It Matters	Strict replication studies generally preserve the original methodological pipeline much more closely.
+Suggested Improvement	Use terms such as 'partial replication', 'replication-inspired extension', or 'replication and methodological extension'.
+
+Point 6: Selective Statistical Validation
+Location	Statistical Validation section
+Problem	Statistical testing is applied only to BalancedBagging comparisons, but strong comparative claims are later made between classifiers and imbalance-handling methods.
+Why It Matters	Reviewers may ask whether differences between LightGBM, MLP, and SVM are statistically significant.
+Suggested Improvement	Add a short discussion acknowledging that inter-model differences were not formally tested statistically.
+
+Point 7: Potential Selection Bias Due to Exclusions
+Location	Dataset Overview section
+Problem	Patients with missing FVC, missing height, and censored follow-up were excluded, but the paper does not analyse whether these exclusions introduce selection bias.
+Why It Matters	In clinical ML, missingness itself can be prognostic and exclusion criteria may distort the cohort.
+Suggested Improvement	Add a brief limitations discussion acknowledging possible selection bias introduced by exclusion criteria.
+
+Point 8: AI-Generated Writing Style
+Location	Mostly in Discussion and Results
+Problem	Some paragraphs contain very polished rhetorical structures and explanatory transitions that resemble AI-assisted academic writing.
+Why It Matters	Overly polished and uniformly elegant prose can trigger reviewer suspicion.
+Suggested Improvement	Rewrite a few sections in a more direct technical style and reduce rhetorical flourish.
+
+Point 9: Clinical Interpretation Tone
+Location	Held-out test-set discussion
+Problem	Some sentences sound too close to clinical deployment claims.
+Why It Matters	The study is retrospective and internally validated only.
+Suggested Improvement	Use more cautious wording such as 'correctly classified patients in the held-out subset' instead of implying clinical utility.
+
+Point 10: Figure and Visual Style
+Location	SHAP figures and plots
+Problem	Some figures could look visually generic or AI-generated.
+Why It Matters	Workshop reviewers increasingly notice generic AI-style figure aesthetics.
+Suggested Improvement	Improve color palette consistency, font sizes, spacing, and overall visual identity.
+
+Final Recommendation
+The paper has strong potential and is substantially more rigorous than many workshop submissions. The most important issue to clarify is whether the prognostic features were computed without future-information leakage. In addition, adding calibration analysis and slightly reducing speculative interpretations would significantly improve the scientific robustness of the manuscript.

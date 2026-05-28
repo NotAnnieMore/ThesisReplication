@@ -1,0 +1,56 @@
+# ── Virtual environment ───────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── PRO-ACT raw data (Data Use Agreement — must not be shared publicly) ───────
+01_data/raw/*.csv
+01_data/raw/*.xlsx
+
+# ── Derived / intermediate patient-level data ─────────────────────────────────
+01_data/interim/*.csv
+01_data/interim/*.xlsx
+01_data/processed/*.csv
+01_data/processed/*.xlsx
+01_data/processed/*.npz
+
+# Keep folder structure visible
+!01_data/raw/.gitkeep
+!01_data/interim/.gitkeep
+!01_data/processed/.gitkeep
+
+# ── Python cache ───────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ── Jupyter / IPython ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── OS artefacts ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor / IDE ──────────────────────────────────────────────────────────────
+.vscode/settings.json
+*.code-workspace
+
+# ── LaTeX build artefacts ─────────────────────────────────────────────────────
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# ── Large PDFs (pdf/ folder kept but ignore binary PDFs > reasonable size) ────
+pdf/*.pdf

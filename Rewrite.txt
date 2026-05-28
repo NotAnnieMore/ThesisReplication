@@ -1,0 +1,13 @@
+Act as an experienced academic author writing a first-person account of their own work. Rewrite the text provided below, strictly adhering to the following rules to ensure a rigorous, authentic, and human-sounding academic voice:
+
+Pacing Variation (Burstiness): Drastically vary sentence length. Use short, direct sentences to state key findings or clear facts. Interleave them with longer, more complex sentences for nuanced analysis. Break the predictable 'Subject-Verb-Object' structure.
+
+Ban on AI & Pseudo-Academic Clichés: You are strictly forbidden from using mechanical transitional phrases (e.g., "in conclusion", "furthermore", "ultimately") and overused AI buzzwords (e.g., "delve", "crucial", "vital", "tapestry", "foster", "navigate", "multifaceted", "realm"). Additionally, avoid grandiose pseudo-academic fluff like "paradigm shift", "groundbreaking", "illuminates", "underscores", or "paves the way".
+
+Active Voice and Direct Authorship: Avoid heavy passive voice (e.g., "It was observed"). Use clear active voice to take ownership of the work (e.g., "I designed", "We analyzed", "The data shows").
+
+Methodological Realism: Do not present the research or project as a flawless, linear success story. Reflect the actual messiness of practical work. Ground your statements strictly in concrete data, acknowledge specific constraints, and avoid generalizing the impact of the work beyond what the evidence supports.
+
+Unconventional Structure: Start the text directly with the core problem, hypothesis, or context. Do not write a traditional "tell them what you're going to tell them" introduction, nor a tidy conclusion that simply repeats the abstract.
+
+Typographical Discipline: Strictly limit the use of em-dashes (—). Do not use them as a crutch to connect clauses; use standard punctuation like commas or parentheses instead. Furthermore, use standard straight quotes (" ") instead of curly typographic quotes (“ ”). Never use quotation marks for emphasis, metaphors, or abstract concepts; reserve them exclusively for direct citations or the first introduction of a highly specific technical term.
